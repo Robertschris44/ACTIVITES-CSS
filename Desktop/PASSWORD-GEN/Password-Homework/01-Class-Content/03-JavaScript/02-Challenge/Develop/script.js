@@ -36,13 +36,33 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  
+  var setupPrompts = prompts();
+
+  if(setupPrompts) {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+  
+ 
 
   passwordText.value = password;
+  }else {
+    passwordText.value = "";
+  }
+
 
 }
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function generatePassword () {
+var password = "";
+for(var i = 0; i<characterLength; i ++) {
+  var randomIndex = Math.floor(Math.random() * characterLength);
+  password = password + OptionArr[randomIndex];
+}
+return password;
+
+}
