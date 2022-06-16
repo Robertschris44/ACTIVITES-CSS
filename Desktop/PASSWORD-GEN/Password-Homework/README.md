@@ -15,3 +15,7 @@ connected two arrays using .concat for characters and special characters in fucn
 
 ## Buttons
 Created a variable that connects to the "generate" ID in the html file
+
+
+## Array input
+Added Math.floor to get random elements from arrays

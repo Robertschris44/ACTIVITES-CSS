@@ -62,6 +62,7 @@ var password = "";
 for(var i = 0; i<characterLength; i ++) {
   var randomIndex = Math.floor(Math.random() * characterLength);
   password = password + OptionArr[randomIndex];
+  var specialCharArray= Math.floor(Math.random() * specialCharArray);
 }
 return password;
 
